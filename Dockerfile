@@ -11,8 +11,6 @@ COPY requirements.txt /tmp/requirements.txt
 # Install Twine in Python
 RUN python3.11 -m pip install -r /tmp/requirements.txt
 
-COPY .pypirc /root/.pypirc
-
 
 # Set virtual environment as entrypoint
 ENTRYPOINT ["/bin/bash"]

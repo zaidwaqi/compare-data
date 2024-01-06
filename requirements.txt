@@ -1,5 +1,4 @@
 build
-twine
 pytest
 pyarrow
 pandas
