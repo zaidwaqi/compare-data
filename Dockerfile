@@ -6,10 +6,13 @@ RUN dnf install -y glibc-langpack-en python3.11 make
 RUN python3.11 -m venv /venv
 ENV PATH="/venv/bin:$PATH"
 
+COPY requirements.txt /tmp/requirements.txt
+
 # Install Twine in Python
-RUN python3.11 -m pip install build twine pytest pandas pyarrow numpy
+RUN python3.11 -m pip install -r /tmp/requirements.txt
 
 COPY .pypirc /root/.pypirc
+
 
 # Set virtual environment as entrypoint
 ENTRYPOINT ["/bin/bash"]
