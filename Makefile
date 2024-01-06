@@ -2,5 +2,5 @@
 .PHONY: test
 
 test:
-	@echo "This is a test"
+	@pytest --tb=line
 
