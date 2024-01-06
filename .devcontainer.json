@@ -1,0 +1,8 @@
+{
+    "name": "cmpd",
+    "dockerFile": "Dockerfile",
+    // set minimum cpu
+     "hostRequirements": {
+         "cpus": 2
+     }
+}
